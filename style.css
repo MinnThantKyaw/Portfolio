@@ -1,0 +1,366 @@
+@font-face{
+    font-family: "myfont";
+    src: url("CabinSketch-Regular.ttf");
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    /* font-family: cursive,'Times New Roman', Times, serif; */
+    font-family: myfont;
+    color: white;
+
+    scroll-behavior: smooth;
+    scroll-padding-top: 30px;
+/* link တွေကိုနှိပ်တဲ့အခါ scroll smooth ဖြစ်အောင် */
+}
+
+/* common css */
+.container{
+    max-width: 900px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.container:not(#header .container){
+    padding: 15px;
+}
+
+.section-title{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#abtme,
+#myskills,
+#myworks,
+#contactme,
+#footer {
+    margin-top: 50px;
+}
+
+.box-shadow{
+    box-shadow: 5px 5px 8px black;
+}
+
+/* end common css */
+
+
+/* header css */
+.main-container{
+    background-color: skyblue;
+    height: auto;
+    padding-top: 50px;
+}
+
+#header > .container{
+    align-items: center;
+    border-radius: 10px;
+    border: 5px solid white;
+    background-color: darkblue;
+}
+#header > .container .content{
+    flex-basis: 60%;
+    text-align: center;
+    line-height: 30px;
+}
+#header > .container .content h1,
+#header > .container .content h4,
+#header > .container .content p{
+    margin-bottom: 20px;
+}
+#header > .container .content h4{
+    letter-spacing: 10px;
+    font-size: 20px;
+}
+
+#header > .container .image-div{
+    flex-basis: 40%;
+}
+#header > .container .image-div img{
+    width: 100%;
+    border-radius: 50% 0;
+}
+.social-icons a{
+    margin: 15px;
+    font-size: 30px;
+}
+.social-icons a .fa-youtube{
+    color: red;
+}
+.social-icons a .fa-instagram{
+    color: hotpink;
+}
+.social-icons a .fa-facebook{
+    color: blue;
+}
+
+/* about me css */
+#abtme .container{
+    align-items: center;
+}
+#abtme .container > div{
+    /* border: 3px solid orange; */
+    flex-basis: 50%;
+}
+#abtme .image-div img{
+    width: 60%;
+    height: auto; /* near same height and width  */
+    border-radius: 50%;
+    margin: auto;
+    display: block; /*block ပေးမှ အလည်ရောက်မယ်*/
+    box-shadow: 1px 2px 4px gray;
+}
+#abtme h1{
+    font-weight: bold;
+}
+#abtme .content p{
+    margin-top: 10px;
+}
+#abtme .content h3{
+    line-height: 40px;
+    color: gray;
+    font-weight: bold;
+}
+#abtme .content h2:first-child{
+    color: darkblue;
+}
+
+/* My skills css */
+
+#myskills .container{
+    align-items: center;
+}
+
+#myskills .content ul{
+    list-style-type: none;
+    margin-bottom: 30px;
+}
+#myskills .content ul li{
+    /* border: 1px solid green; */
+    display: inline-block;
+    background-color: rgba(163, 184, 187, 0.43);
+    padding: 10px 14px;
+    margin: 15px 5px 5px 0;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#myskills .container > div{
+    flex-basis: 50%;
+}
+#myskills .image-div img{
+    max-width: 90%;
+    /* margin: auto; */
+    float: right;
+    display: block;
+    border-radius: 5px;
+}
+
+/* my works css */
+
+#myworks .container{
+    justify-content: space-between;
+}
+
+#myworks .container .card{
+    /* background-color: darkblue; */
+    /* background-image: linear-gradient(to top,#0b0b0b,#2b396d,lightblue); */
+    background-color: rgba(4, 39, 212, 0.382);
+
+    flex-basis: 30%;
+    min-height: 250px;
+    border-radius: 10px;
+    padding: 20px 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.5s,box-shadow 0.5s,background-color 1s;
+
+    /* box-shadow: 0px 0px 10px black; */
+}
+#myworks .card:hover{
+    transform: scale(1.1);
+    background-color: darkblue;
+    /* position: relative;
+    bottom: 10px; */
+    box-shadow: 0px 10px 5px gray;
+}
+#myworks .card h3{
+    margin: 20px 0;
+}
+#myworks .card i{
+    font-size: 24px;
+}
+
+/* contact me css */
+
+#contactme .container div{
+    /* border: 2px solid orange; */
+    flex-basis: 50%;
+}
+
+#contactme ul{
+    list-style-type: none;
+    line-height: 40px;
+    font-weight: bold;
+}
+
+#contactme form .formgp{
+    display: flex;
+    justify-content: space-between;
+}
+#contactme form .formgp input,
+#contactme form textarea,
+#contactme form button{
+    border-radius: 5px;
+    padding: 5px 10px;
+    border: none;
+    margin-bottom: 10px;
+    color: black;
+}
+#contactme form .formgp input{
+    flex-basis: 49%;
+    height: 40px;
+}
+
+#contactme form textarea{
+    width: 100%;
+    height: 100px;
+}
+#contactme form button{
+    padding: 8px 35px;
+    float: right;
+    background-color: darkblue;
+    box-shadow: 0 5px 2px gray;
+    color: white;
+}
+#contactme form button:hover{
+    position: relative;
+    top: 2px;
+    box-shadow: 0 0 0 black;
+}
+
+/* footer css */
+
+#footer {
+    background-color: darkblue;
+}
+#footer .container{
+    justify-content: space-between;
+    padding: 30px 0 50px 0;
+}
+#footer .container .column{
+    flex-basis: 30%;
+    /* border: 1px solid red; */
+    line-height: 40px;
+    text-align: center;
+}
+#footer .container .column:first-child{
+    flex-basis: 40%;
+}
+.column .social-icons a{
+    margin: 3px;
+}
+#footer .container .column ul{
+    list-style-type: none;
+}
+#footer .container .column ul li a{
+    text-decoration: none;
+}
+#footer .container .column h3{
+    margin-bottom: 20px;
+}
+
+/* go to top css */
+
+/* #gototop{
+    background-color: orange;
+    display: block;
+    width: 50px;
+    height: 60px;
+    line-height: 65px;
+    text-align: center;
+    font-size: 40px;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+} */
+
+#gototop i{
+    font-size: 40px;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+}
+
+/* Responsive css */
+@media(max-width:600px){
+    .container:not(#footer .container,#header .container){
+        padding: 20px;
+    }
+    #header .container{
+        flex-direction: column-reverse;
+        border: none;
+        border-radius: 4px;
+        margin: 10px;
+        box-shadow: none;
+    }
+    #header .container .content, #abtme .content{
+        padding: 30px 0;
+    }
+
+    #header .container .image-div img{
+        max-width: 100%;
+        border-radius: 0;
+    }
+
+    #abtme .container{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #myskills .container{
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    #myskills .container .content{
+        padding: 30px 0;
+    }
+    #myskills .image-div img{
+        max-width: 100%;
+        float: none;
+    }
+
+    #myworks .container{
+        flex-direction: column;
+    }
+    #myworks .container .card{
+        margin: 10px auto;
+        width: 80%;
+    }
+
+    #contactme .container{
+        flex-direction: column;
+    }
+
+    form .formgp{
+        flex-direction: column;
+    }
+
+    #footer .container{
+        flex-direction: column;
+    }
+    #footer{
+        padding-bottom: 50px;
+    }
+    #footer .column{
+        margin: 20px 0;
+    }
+    #footer .container .column h3{
+        margin-bottom: 8px;
+        font-size: 24px;
+    }
+}
